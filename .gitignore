@@ -8,6 +8,10 @@ tempCodeRunnerFile.c
 # VSCode
 .vscode
 
+# CLion
+cmake-build-debug
+CMakeLists.txt
+
 # OS and Other files
 .DS_Store
 *.zip

@@ -1,4 +1,4 @@
-/************************************************************************************************
+/********************************************************************************************
  * AUTHOR: Vitor Watanabe
  * VISIT: https://github.com/vitordwb/fei-ccp130
  * 
@@ -35,5 +35,5 @@ int main(void) {
   } else {
     printf("O ponto (%.2f, %.2f) está no Quadrante %c\n", x, y, define_quadrant(x, y));
   }
-  return 0;
+    return 0;
 }
