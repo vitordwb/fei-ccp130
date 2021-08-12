@@ -1,4 +1,4 @@
-/********************************************************************************************
+/*************************************************************************************************
  * AUTHOR: Vitor Watanabe
  * VISIT: https://github.com/vitordwb/fei-ccp130
  * 
@@ -9,31 +9,23 @@
  *************************************************************************************************/
 
 #include <stdio.h>
-
-char define_quadrant(float x_coord, float y_coord) {
-  char q;
-  if (x_coord > 0 && y_coord > 0) {
-    q = '1';
-  } else if (x_coord < 0 && y_coord > 0) {
-    q = '2';
-  } else if (x_coord < 0 && y_coord < 0) {
-    q = '3';
-  } else {
-    q = '4';
-  }
-  return q;
-}
+#include <locale.h> //necessário para usar setlocale
 
 int main(void) {
-  printf("Digite dois números reais de coordenadas X e Y respectivamente (separados por espaço, EX: 10 1): ");
-  float x, y;
-  scanf("%f %f", &x, &y);
-  if (x == 0) {
-    printf("Ponto se encontra sobre o eixo X: (%.2f, %.2f)\n", x, y);
-  } else if (y == 0) {
-    printf("Ponto se encontra sobre o eixo Y: (%.2f, %.2f)\n", x, y);
-  } else {
-    printf("O ponto (%.2f, %.2f) está no Quadrante %c\n", x, y, define_quadrant(x, y));
-  }
-    return 0;
+  setlocale(LC_ALL, "Portuguese"); //habilita a acentuação para o português
+
+  int x, y;
+  printf("Digite x e y:\n");
+  scanf("%d %d", &x, &y);
+
+  if(x==0 && y==0)
+    printf("Esta na origem");
+  else if (x>0 && y>0)
+    printf("Q1");
+  else if (x<0 && y>0)
+    printf("Q2");
+  else if (x<0 && y<0)
+    printf("Q3");
+  else if (x>0 && y<0)
+    printf("Q4");
 }
