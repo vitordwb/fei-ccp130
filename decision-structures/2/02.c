@@ -23,7 +23,7 @@
 
 int main(void) {
     float wage, new_wage, reajust;
-    printf("Digite o salario:\n");
+    printf("Digite o salário:\n");
     scanf("%f", &wage);
 
     if(wage <= 400){
