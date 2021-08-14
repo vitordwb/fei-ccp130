@@ -1,5 +1,5 @@
 /*************************************************************************************************
- * AUTHOR: Vitor Watanabe
+ * AUTHOR: Gustavo Pires
  * VISIT: https://github.com/vitordwb/fei-ccp130
  * 
  * Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
