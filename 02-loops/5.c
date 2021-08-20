@@ -19,5 +19,21 @@
 
 int main(void) {
 
+  int n1=0, n2=1, res;
+  int next_num = n1 + n2;
+
+  printf("Digite um número:\n");
+  scanf("%d", &res);
+
+  printf("%d %d", n1, n2); // print the first two numbers n1 and n2
+
+  for(int i=3; i <= res; i++){
+    // 0 1 1 2 3 5 8 13 21 ...
+    printf(" %d", next_num);
+    n1 = n2;
+    n2 =  next_num;
+    next_num = n1 + n2;
+  }
+
   return 0;
 }
