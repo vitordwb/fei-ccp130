@@ -12,28 +12,46 @@
  *************************************************************************************************/
 
 #include <stdio.h>
+#include <stdbool.h>
 #include <math.h>
 
 int main(void) {
-  int x, y, first_x, first_y, total;
-  float distance, perimeter=0;
+  int xcoord = 0, ycoord = 0, fst_xcoord = 0, fst_ycoord = 0, lst_xcoord = 0, lst_ycoord = 0;
+  bool fst_iter = true;
+  float distance = 0, perimeter = 0;
+  do {
+    printf("Digite o x da coordenada:\n");
+    scanf("%d", &xcoord);
 
-  while(x != -99) {
-    printf("Digite o x da coordenada: ");
-    scanf("%d", &x);
-    if (x == -99)
+    if(xcoord == -99) {
+      xcoord = lst_xcoord;
+      ycoord = lst_ycoord;
       break;
+    }
 
-    printf("Digite o y da coordenada: ");
-    scanf("%d", &y);
+    printf("Digite o y da coordenada:\n");
+    scanf("%d", &ycoord);
 
-    first_x = x;
-    first_y = y;
+    if(fst_iter) {
+      fst_xcoord = xcoord;
+      fst_ycoord = ycoord;
+      fst_iter = false;
+    }
 
+    distance = sqrt(pow(xcoord - lst_xcoord, 2) + pow(ycoord - lst_ycoord, 2));
+    // printf("Distância %f\n", distance);
+    perimeter += distance;
 
+    lst_xcoord = xcoord;
+    lst_ycoord = ycoord;
+    // printf("lst Y: %d, lst X: %d\n", lst_ycoord, lst_xcoord);
+  } while(xcoord != -99);
+
+  if(perimeter) {
+    distance = sqrt(pow(xcoord - fst_xcoord, 2) + pow(ycoord - fst_ycoord, 2));
+    perimeter += distance;
+    printf("Perímetro total de %.2f\n", perimeter);
   }
-
-  printf("Perímetro total de %.2f", total);
 
   return 0;
 }
