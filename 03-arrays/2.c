@@ -1,6 +1,6 @@
 /*************************************************************************************************
- * Faça um programa para receber um vetor de 10 elementos inteiros e apresentar todos os conteúdos 
- * que forem maiores que a soma de dois de seus antecessores
+ * Faça um programa que mostra o menor valor dentro do vetor
+ * use T={1, 7 ,2 ,4}
  ************************************************************************************************/
 
 #include <stdio.h>
