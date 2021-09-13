@@ -5,7 +5,7 @@
 int main(void) {
   int m[5][6], coord_line, coord_row, lowest, biggest;
 
-  srand(seed);
+  // srand(seed);
 
   for(int i = 0; i < 5; i++){
     for(int j = 0; j < 6; j++) {
