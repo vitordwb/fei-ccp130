@@ -6,3 +6,30 @@
  * O programa principal deve ler as entradas, acionar a função e exibir a resposta.
  ************************************************************************************************/
 
+#include <stdio.h>
+#include <stdbool.h>
+
+bool can_donate(char, float);
+
+int main(void) {
+  char sex;
+  float weight;
+  printf("Digite seu sexo (m ou f):");
+  scanf(" %c", &sex);
+  printf("Digite seu peso em kg:");
+  scanf("%f", &weight);
+
+  if(can_donate(sex, weight)) {
+    printf("Você pode doar sangue!\n");
+  } else {
+    printf("Você não pode doar sangue!\n");
+  }
+  return 0;
+}
+
+bool can_donate(char s, float w) {
+  if((s == 'm' && w >= 60) || (s == 'f' && w >= 50)) {
+    return true;
+  }
+  return false;
+}

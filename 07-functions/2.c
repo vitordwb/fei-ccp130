@@ -4,3 +4,14 @@
 
  * Atenção:  Submeta somente o código da função, sem o main.
  ************************************************************************************************/
+
+#include <stdio.h>
+
+void triplo(int*, int*, int*);
+
+
+void triplo(int *a, int *b, int *c){
+  *a *= 3;
+  *b *= 3;
+  *c *= 3;
+}
